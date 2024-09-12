@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Espacial G&P</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="./index.html" class="logo">
+                <h1>G&P</h1>
+                <h5>Agência Espacial</h5>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Preço</a></li>
+                <li><a href="#">Solução</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Sobre nós</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login">Login</button>
+                <button class="cadastrar">Cadastrar</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <img src="./img/banner.jpg" alt="Imagem de banner" loading="lazy">
+
+            <div class="bannerText">
+                <h1>Fabricação de propulsores para grandes empresas espaciais.</h1>
+                <p>Subtitle</p>
+            </div>
+            <div class="banner-buttons">
+                <button class="login">Login</button>
+                <button class="cadastrar">Cadastrar</button>
+            </div>
+        </section>
+        <section class="notificacao">
+            <h1>Receba as novidades sobre:</h1>
+            <h1>G&P Agencia Espacial</h1>
+            <p>with out daily newsletter</p>
+            <div>
+                <input type="text" placeholder="Email@example.com">
+                <button>Enviar</button>
+            </div>
+        </section>
+        <section class="apresentacao">
+            <div>
+                <h1>Nossa Equipe!</h1>
+                <p>Nossa equipe é composta por profissionais dedicados e apaixonados pelo que fazem. Cada membro traz uma combinação única de habilidades e experiências que se complementam, formando um time forte e coeso. Valorizamos a colaboração, a inovação e o compromisso com a excelência em tudo o que fazemos. Juntos, enfrentamos desafios com criatividade e perseverança, sempre focados em alcançar os melhores resultados para nossos clientes e parceiros. Acreditamos que o sucesso é construído a partir de um trabalho em equipe sólido, onde cada voz é ouvida e cada ideia é valorizada. Estamos aqui para crescer juntos e fazer a diferença!</p>
+            </div>
+            <img src="./img/oldman.jpg" alt="">
+        </section>
+        <section class="noticias">
+            <div>
+                <h1>Noticias</h1>
+                <p>Subheading</p>
+            </div>
+            <div class="list1">
+                <div class="card">
+                    <img src="./img/foguete.jpg" alt="">
+                    <h1>Foguetes</h1>
+                    <p>Um dos nossos foguetes conseguiram entrar em órbita sobre a terra</p>
+                </div>
+                <div class="card">
+                    <img src="./img/man.gif" alt="">
+                    <h1>Um dos nossos mecânicos</h1>
+                    <p>Nossos mecânicos fazem o melhor, para manter os motores funcionando durante os testes.</p>
+                </div>
+                <div class="card">
+                    <img src="./img/G&Pspace.jpg" alt="">
+                    <h1>Agência Espacial</h1>
+                    <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story. </p>
+                </div>
+            </div>
+            <div class="list2">
+                <div class="card">
+                    <img src="./img/humm.jpg" alt="">
+                    <div>
+                        <h1>História da Física</h1>
+                        <p>
+                            Isaac Newton (1642-1727) foi um físico e matemático britânico, conhecido por formular as leis do movimento e a lei da gravitação universal. Seus trabalhos, especialmente...
+                            <span class="extra-texto" style="display: none;">as informações adicionais sobre a física, mecânica clássica e contribuições de Newton o impacto de suas descobertas na ciência moderna.</span>
+                            <span class="extensao">Sobre mais...</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img/space.jpg" alt="">
+                    <div>
+                        <h1>O Espaço</h1>
+                        <p>
+                            O Espaço, como tudo nesse mundo é perfeito se fosse aleatório teria falhas até a natureza é perfeita como uma abelha sabe fazer mel e nós não. Como que a matemática é...
+                            <span class="extra-texto">a beleza da matemática no universo, mistérios ainda não resolvidos sobre o espaço, a relação entre a natureza e a física moderna.</span>
+                            <span class="extensao">Sobre mais...</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <h1>G&P</h1>
+                <h5>Agência Espacial</h5>
+            </div>
+            <div class="redes-sociais">
+                <a href="#"><img src="./img/X.png" alt="Logo X"></a>
+                <a href="#"><img src="./img/insta.png" alt="Logo Instagram"></a>
+                <a href="#"><img src="./img/youtube.png" alt="Logo YouTube"></a>
+                <a href="#"><img src="./img/linkedin.png" alt="Logo LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const expansoes = document.querySelectorAll('.extensao');
+
+        expansoes.forEach(expansao => {
+            expansao.addEventListener('click', function() {
+                const extraTexto = this.previousElementSibling;
+
+                if (extraTexto.style.display === 'none') {
+                    extraTexto.style.display = 'inline';  
+                    expansao.textContent = 'Mostrar menos';  
+                } else {
+                    extraTexto.style.display = 'none'; 
+                    expansao.textContent = 'Sobre mais...';  
+                }
+            });
+        });
+    </script>
+</body>
+</html>
